@@ -22,7 +22,15 @@
 void main(void)
 {
     ANSEL = 0x00;
-    CMCON = 0x07;
+    CMCON0 = 0x07;
+    
+    TRISA = 0x07; //RA0,1,2 nputs. others outputs
+    PORTA = 0xF8; //PORTA outputs set to mcu logic high
+    
+    TRISC = 0x00; //all outputs
+    PORTC = 0xFF; // PORTC outputs set to mcu logic high
+    
+    //check VHZ input on reset
 
 }
 
