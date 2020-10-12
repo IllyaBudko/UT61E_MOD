@@ -93,7 +93,7 @@ void main(void)
                     __delay_ms(100);
                     while(!DCAC);
                     PORTAbits.DCAC_HOOK = 0;
-                    __delay_ms(50);
+                    __delay_ms(500); // 500 for testing purpose should be 50
                     PORTAbits.DCAC_HOOK = 1;
 
                 }
@@ -107,6 +107,9 @@ void main(void)
     
     while(1)
     {
+        //implement main loop
+        
+        //for testing purpose
         PORTC = 0xFF;
         __delay_ms(500);
         PORTC = 0x00;
