@@ -88,12 +88,16 @@
 [v _RA0 RA0 `VEb  1 e 0 @40 ]
 "2247
 [v _RA1 RA1 `VEb  1 e 0 @41 ]
+"2250
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2271
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
 "2382
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
 "49 C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"116
+"199
 } 0
 "23 C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\interrupts.c
 [v _isr isr `II(v  1 e 1 0 ]

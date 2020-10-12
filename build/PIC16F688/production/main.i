@@ -1682,14 +1682,7 @@ void main(void)
     TMR1L = 0x00;
     TMR1H = 0x00;
     T1CON = 0x30;
-
-
-
-
-    while(RA1);
-
-
-
+# 77 "main.c"
     if(!RA1)
     {
         _delay((unsigned long)((100)*(4000000UL/4000.0)));
@@ -1709,7 +1702,7 @@ void main(void)
                     _delay((unsigned long)((100)*(4000000UL/4000.0)));
                     while(!RA0);
                     PORTAbits.RA4 = 0;
-                    _delay((unsigned long)((50)*(4000000UL/4000.0)));
+                    _delay((unsigned long)((500)*(4000000UL/4000.0)));
                     PORTAbits.RA4 = 1;
 
                 }
@@ -1723,11 +1716,93 @@ void main(void)
 
     while(1)
     {
-        PORTC = 0xFF;
-        _delay((unsigned long)((500)*(4000000UL/4000.0)));
-        PORTC = 0x00;
-        _delay((unsigned long)((500)*(4000000UL/4000.0)));
+
+        _delay((unsigned long)((150)*(4000000UL/4000.0)));
+        if((!RA0) && (!RA1))
+        {
+            T1CONbits.TMR1ON = 1;
+            while(!(RA0 && RA1));
+            if(TMR1IF)
+            {
+                if(RC1)
+                {
+                    PORTCbits.RC1 = 0;
+                }
+                else
+                {
+                    PORTCbits.RC1 = 1;
+                }
+            }
+            else
+            {
+
+                __nop();
+            }
+            T1CONbits.TMR1ON = 0;
+            TMR1L = 0x00;
+            TMR1H = 0x00;
+            TMR1IF = 0;
+        }
+        else if(!RA0)
+        {
+            T1CONbits.TMR1ON = 1;
+            while(!RA0);
+            if(TMR1IF)
+            {
+                PORTCbits.RC5 = 0;
+                _delay((unsigned long)((500)*(4000000UL/4000.0)));
+                PORTCbits.RC5 = 1;
+            }
+            else
+            {
+                PORTAbits.RA4 = 0;
+                _delay((unsigned long)((500)*(4000000UL/4000.0)));
+                PORTAbits.RA4 = 1;
+            }
+            T1CONbits.TMR1ON = 0;
+            TMR1L = 0x00;
+            TMR1H = 0x00;
+            TMR1IF = 0;
+        }
+        else if(!RA1)
+        {
+            T1CONbits.TMR1ON = 1;
+            while(!RA1);
+            if(TMR1IF)
+            {
+                PORTCbits.RC0 = 0;
+                _delay((unsigned long)((500)*(4000000UL/4000.0)));
+                PORTCbits.RC0 = 1;
+            }
+            else
+            {
+                PORTAbits.RA5 = 0;
+                _delay((unsigned long)((500)*(4000000UL/4000.0)));
+                PORTAbits.RA5 = 1;
+            }
+            T1CONbits.TMR1ON = 0;
+            TMR1L = 0x00;
+            TMR1H = 0x00;
+            TMR1IF = 0;
+        }
+        else
+        {
+            __nop();
+        }
+
+
+
+
+
+
+
+        if(RA2)
+        {
+            PORTCbits.RC4 = 1;
+        }
+        else
+        {
+            PORTCbits.RC4 = 0;
+        }
     }
-
-
 }

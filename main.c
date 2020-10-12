@@ -69,7 +69,7 @@ void main(void)
     //MCU logic level 1(high) is DMM logic level 0(low) and vice versa
     
     //for testing purposes
-    while(VHZ);
+//    while(VHZ);
     
     
     
@@ -108,14 +108,96 @@ void main(void)
     while(1)
     {
         //implement main loop
+        __delay_ms(150);
+        if((!DCAC) && (!VHZ))
+        {
+            T1CONbits.TMR1ON = 1;
+            while(!(DCAC && VHZ));
+            if(TMR1IF)
+            {
+                if(RS232)
+                {
+                    PORTCbits.RS232 = 0;
+                }
+                else
+                {
+                    PORTCbits.RS232 = 1;
+                }
+            }
+            else
+            {
+                //For future purpose
+                NOP();
+            }
+            T1CONbits.TMR1ON = 0;
+            TMR1L = 0x00;
+            TMR1H = 0x00;
+            TMR1IF = 0;            
+        }
+        else if(!DCAC)
+        {
+            T1CONbits.TMR1ON = 1;
+            while(!DCAC);
+            if(TMR1IF)
+            {
+                PORTCbits.MAXMIN = 0;
+                __delay_ms(500); // 500 for testing purpose should be 50
+                PORTCbits.MAXMIN = 1;
+            }
+            else
+            {
+                PORTAbits.DCAC_HOOK = 0;
+                __delay_ms(500); // 500 for testing purpose should be 50
+                PORTAbits.DCAC_HOOK = 1;
+            }
+            T1CONbits.TMR1ON = 0;
+            TMR1L = 0x00;
+            TMR1H = 0x00;
+            TMR1IF = 0;
+        }
+        else if(!VHZ)
+        {
+            T1CONbits.TMR1ON = 1;
+            while(!VHZ);
+            if(TMR1IF)
+            {
+                PORTCbits.BKLIT = 0;
+                __delay_ms(500); // 500 for testing purpose should be 50
+                PORTCbits.BKLIT = 1;
+            }
+            else
+            {
+                PORTAbits.VHZ_HOOK = 0;
+                __delay_ms(500); // 500 for testing purpose should be 50
+                PORTAbits.VHZ_HOOK = 1;
+            }
+            T1CONbits.TMR1ON = 0;
+            TMR1L = 0x00;
+            TMR1H = 0x00;
+            TMR1IF = 0;
+        }
+        else
+        {
+            NOP();
+        }
         
         //for testing purpose
-        PORTC = 0xFF;
-        __delay_ms(500);
-        PORTC = 0x00;
-        __delay_ms(500);
-    }
-    
-    
+//        PORTC = 0xFF;
+//        __delay_ms(500);
+//        PORTC = 0x00;
+//        __delay_ms(500);
+        //Implement BKOUT to BKLED
+        if(BKOUT)
+        {
+            PORTCbits.BKLED = 1;
+        }
+        else
+        {
+            PORTCbits.BKLED = 0;
+        }
+    }   
 }
+
+
+
 
