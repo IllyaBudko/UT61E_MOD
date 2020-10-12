@@ -36,11 +36,7 @@
 #define DCAC_HOOK   RA4 //Initial state mcu 1, dmm 0
 #define VHZ_HOOK    RA5 //Initial state mcu 1, dmm 0
 
-<<<<<<< HEAD
-    /* Initialize I/O and Peripherals for application */
-    InitApp();
-// test test test
-=======
+
 //PORTC defines
 #define BKLIT       RC0 //Initial state mcu 1, dmm 0
 #define RS232       RC1 //Initial state mcu 1, dmm 0
@@ -50,7 +46,7 @@
 #define MAXMIN      RC5 //Initial state mcu 1, dmm 0
 
 #define _XTAL_FREQ 4000000UL
->>>>>>> develop
+
 
 void main(void)
 {
@@ -76,6 +72,7 @@ void main(void)
     
     //for testing purposes
 //    while(VHZ);
+    
     
     
     
