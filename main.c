@@ -15,9 +15,22 @@
 #include <pic16f688.h>
 
 //PORTA defines
+//Inputs
+#define DCAC        RA0
+#define VHZ         RA1
+#define BKOUT       RA2
+
+//Outputs
+#define DCAC_HOOK   RA4
+#define VHZ_HOOK    RA5
 
 //PORTC defines
-
+#define BKLIT       RC0
+#define RS232       RC1
+#define LPF         RC2
+#define SLADC       RC3
+#define BKLED       RC4
+#define MAXMIN      RC5
 
 void main(void)
 {
@@ -31,6 +44,7 @@ void main(void)
     PORTC = 0xFF; // PORTC outputs set to mcu logic high
     
     //check VHZ input on reset
-
+    __delay_ms(50);
+    
 }
 
