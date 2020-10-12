@@ -267,83 +267,83 @@ Version 4.0 HI-TECH Software Intermediate Code
 "26
 [p x FCMEN  =  OFF       ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49
-[; ;main.c: 49: void main(void)
+"51
+[; ;main.c: 51: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"50
-[; ;main.c: 50: {
+"52
+[; ;main.c: 52: {
 {
 [e :U _main ]
 [f ]
-"51
-[; ;main.c: 51:     ANSEL = 0x00;
+"54
+[; ;main.c: 54:     ANSEL = 0x00;
 [e = _ANSEL -> -> 0 `i `uc ]
-"52
-[; ;main.c: 52:     CMCON0 = 0x07;
-[e = _CMCON0 -> -> 7 `i `uc ]
 "55
-[; ;main.c: 55:     TRISA = 0x07;
-[e = _TRISA -> -> 7 `i `uc ]
-"56
-[; ;main.c: 56:     PORTA = 0x30;
-[e = _PORTA -> -> 48 `i `uc ]
-"57
-[; ;main.c: 57:     OPTION_REGbits.nRAPU = 0;
-[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 55:     CMCON0 = 0x07;
+[e = _CMCON0 -> -> 7 `i `uc ]
 "58
-[; ;main.c: 58:     WPUA = 0x07;
-[e = _WPUA -> -> 7 `i `uc ]
+[; ;main.c: 58:     TRISA = 0x07;
+[e = _TRISA -> -> 7 `i `uc ]
+"59
+[; ;main.c: 59:     PORTA = 0x30;
+[e = _PORTA -> -> 48 `i `uc ]
+"60
+[; ;main.c: 60:     OPTION_REGbits.nRAPU = 0;
+[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
 "61
-[; ;main.c: 61:     TRISC = 0x00;
+[; ;main.c: 61:     WPUA = 0x07;
+[e = _WPUA -> -> 7 `i `uc ]
+"64
+[; ;main.c: 64:     TRISC = 0x00;
 [e = _TRISC -> -> 0 `i `uc ]
-"62
-[; ;main.c: 62:     PORTC = 0x67;
-[e = _PORTC -> -> 103 `i `uc ]
 "65
-[; ;main.c: 65:     TMR1L = 0x00;
+[; ;main.c: 65:     PORTC = 0x67;
+[e = _PORTC -> -> 103 `i `uc ]
+"68
+[; ;main.c: 68:     TMR1L = 0x00;
 [e = _TMR1L -> -> 0 `i `uc ]
-"66
-[; ;main.c: 66:     TMR1H = 0x00;
+"69
+[; ;main.c: 69:     TMR1H = 0x00;
 [e = _TMR1H -> -> 0 `i `uc ]
-"67
-[; ;main.c: 67:     T1CON = 0x30;
+"70
+[; ;main.c: 70:     T1CON = 0x30;
 [e = _T1CON -> -> 48 `i `uc ]
-"77
-[; ;main.c: 77:     if(!RA1)
+"73
+[; ;main.c: 73:     if(!RA1)
 [e $ ! ! _RA1 88  ]
-"78
-[; ;main.c: 78:     {
+"74
+[; ;main.c: 74:     {
 {
-"79
-[; ;main.c: 79:         _delay((unsigned long)((100)*(4000000UL/4000.0)));
+"75
+[; ;main.c: 75:         _delay((unsigned long)((100)*(4000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
-"80
-[; ;main.c: 80:         T1CONbits.TMR1ON = 1;
+"76
+[; ;main.c: 76:         T1CONbits.TMR1ON = 1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"81
-[; ;main.c: 81:         while(!RA1);
+"77
+[; ;main.c: 77:         while(!RA1);
 [e $U 89  ]
 [e :U 90 ]
 [e :U 89 ]
 [e $ ! _RA1 90  ]
 [e :U 91 ]
-"82
-[; ;main.c: 82:         if(TMR1IF)
+"80
+[; ;main.c: 80:         if(TMR1IF)
 [e $ ! _TMR1IF 92  ]
-"83
-[; ;main.c: 83:         {
+"81
+[; ;main.c: 81:         {
 {
-"84
-[; ;main.c: 84:             PORTCbits.RC2 = 0;
+"82
+[; ;main.c: 82:             PORTCbits.RC2 = 0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"85
-[; ;main.c: 85:             PORTCbits.RC3 = 1;
+"83
+[; ;main.c: 83:             PORTCbits.RC3 = 1;
 [e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-"87
-[; ;main.c: 87:             T1CONbits.TMR1ON = 0;
+"85
+[; ;main.c: 85:             T1CONbits.TMR1ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"88
-[; ;main.c: 88:             TMR1IF = 0;
+"86
+[; ;main.c: 86:             TMR1IF = 0;
 [e = _TMR1IF -> -> 0 `i `b ]
 "89
 [; ;main.c: 89:             while(1)
@@ -371,8 +371,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 95:                     PORTAbits.RA4 = 0;
 [e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
 "96
-[; ;main.c: 96:                     _delay((unsigned long)((500)*(4000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 96:                     _delay((unsigned long)((50)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
 "97
 [; ;main.c: 97:                     PORTAbits.RA4 = 1;
 [e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
@@ -406,286 +406,295 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 106:     }
 }
 [e :U 88 ]
-"108
-[; ;main.c: 108:     while(1)
-[e :U 101 ]
 "109
-[; ;main.c: 109:     {
+[; ;main.c: 109:     while(1)
+[e :U 101 ]
+"110
+[; ;main.c: 110:     {
 {
-"111
-[; ;main.c: 111:         _delay((unsigned long)((150)*(4000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
-"112
-[; ;main.c: 112:         if((!RA0) && (!RA1))
-[e $ ! && ! _RA0 ! _RA1 103  ]
 "113
-[; ;main.c: 113:         {
-{
+[; ;main.c: 113:         _delay((unsigned long)((150)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
 "114
-[; ;main.c: 114:             T1CONbits.TMR1ON = 1;
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 114:         if((!RA0) && (!RA1))
+[e $ ! && ! _RA0 ! _RA1 103  ]
 "115
-[; ;main.c: 115:             while(!(RA0 && RA1));
+[; ;main.c: 115:         {
+{
+"116
+[; ;main.c: 116:             _delay((unsigned long)((50)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"117
+[; ;main.c: 117:             T1CONbits.TMR1ON = 1;
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+"118
+[; ;main.c: 118:             while(!(RA0 && RA1));
 [e $U 104  ]
 [e :U 105 ]
 [e :U 104 ]
 [e $ ! && _RA0 _RA1 105  ]
 [e :U 106 ]
-"116
-[; ;main.c: 116:             if(TMR1IF)
-[e $ ! _TMR1IF 107  ]
-"117
-[; ;main.c: 117:             {
-{
-"118
-[; ;main.c: 118:                 if(RC1)
-[e $ ! _RC1 108  ]
 "119
-[; ;main.c: 119:                 {
-{
+[; ;main.c: 119:             if(TMR1IF)
+[e $ ! _TMR1IF 107  ]
 "120
-[; ;main.c: 120:                     PORTCbits.RC1 = 0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 120:             {
+{
 "121
-[; ;main.c: 121:                 }
+[; ;main.c: 121:                 if(RC1)
+[e $ ! _RC1 108  ]
+"122
+[; ;main.c: 122:                 {
+{
+"123
+[; ;main.c: 123:                     PORTCbits.RC1 = 0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"124
+[; ;main.c: 124:                 }
 }
 [e $U 109  ]
-"122
-[; ;main.c: 122:                 else
-[e :U 108 ]
-"123
-[; ;main.c: 123:                 {
-{
-"124
-[; ;main.c: 124:                     PORTCbits.RC1 = 1;
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
 "125
-[; ;main.c: 125:                 }
+[; ;main.c: 125:                 else
+[e :U 108 ]
+"126
+[; ;main.c: 126:                 {
+{
+"127
+[; ;main.c: 127:                     PORTCbits.RC1 = 1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"128
+[; ;main.c: 128:                 }
 }
 [e :U 109 ]
-"126
-[; ;main.c: 126:             }
+"129
+[; ;main.c: 129:             }
 }
 [e $U 110  ]
-"127
-[; ;main.c: 127:             else
-[e :U 107 ]
-"128
-[; ;main.c: 128:             {
-{
 "130
-[; ;main.c: 130:                 __nop();
-[e ( ___nop ..  ]
+[; ;main.c: 130:             else
+[e :U 107 ]
 "131
-[; ;main.c: 131:             }
+[; ;main.c: 131:             {
+{
+"133
+[; ;main.c: 133:                 __nop();
+[e ( ___nop ..  ]
+"134
+[; ;main.c: 134:             }
 }
 [e :U 110 ]
-"132
-[; ;main.c: 132:             T1CONbits.TMR1ON = 0;
-[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"133
-[; ;main.c: 133:             TMR1L = 0x00;
-[e = _TMR1L -> -> 0 `i `uc ]
-"134
-[; ;main.c: 134:             TMR1H = 0x00;
-[e = _TMR1H -> -> 0 `i `uc ]
 "135
-[; ;main.c: 135:             TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
+[; ;main.c: 135:             T1CONbits.TMR1ON = 0;
+[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
 "136
-[; ;main.c: 136:         }
+[; ;main.c: 136:             TMR1L = 0x00;
+[e = _TMR1L -> -> 0 `i `uc ]
+"137
+[; ;main.c: 137:             TMR1H = 0x00;
+[e = _TMR1H -> -> 0 `i `uc ]
+"138
+[; ;main.c: 138:             TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
+"139
+[; ;main.c: 139:         }
 }
 [e $U 111  ]
-"137
-[; ;main.c: 137:         else if(!RA0)
+"142
+[; ;main.c: 142:         else if(!RA0)
 [e :U 103 ]
 [e $ ! ! _RA0 112  ]
-"138
-[; ;main.c: 138:         {
+"143
+[; ;main.c: 143:         {
 {
-"139
-[; ;main.c: 139:             T1CONbits.TMR1ON = 1;
+"144
+[; ;main.c: 144:             _delay((unsigned long)((50)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"145
+[; ;main.c: 145:             T1CONbits.TMR1ON = 1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"140
-[; ;main.c: 140:             while(!RA0);
+"146
+[; ;main.c: 146:             while(!RA0);
 [e $U 113  ]
 [e :U 114 ]
 [e :U 113 ]
 [e $ ! _RA0 114  ]
 [e :U 115 ]
-"141
-[; ;main.c: 141:             if(TMR1IF)
-[e $ ! _TMR1IF 116  ]
-"142
-[; ;main.c: 142:             {
-{
-"143
-[; ;main.c: 143:                 PORTCbits.RC5 = 0;
-[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
-"144
-[; ;main.c: 144:                 _delay((unsigned long)((500)*(4000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
-"145
-[; ;main.c: 145:                 PORTCbits.RC5 = 1;
-[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
-"146
-[; ;main.c: 146:             }
-}
-[e $U 117  ]
 "147
-[; ;main.c: 147:             else
-[e :U 116 ]
+[; ;main.c: 147:             if(TMR1IF)
+[e $ ! _TMR1IF 116  ]
 "148
 [; ;main.c: 148:             {
 {
 "149
-[; ;main.c: 149:                 PORTAbits.RA4 = 0;
-[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 149:                 PORTCbits.RC5 = 0;
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
 "150
-[; ;main.c: 150:                 _delay((unsigned long)((500)*(4000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 150:                 _delay((unsigned long)((50)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
 "151
-[; ;main.c: 151:                 PORTAbits.RA4 = 1;
-[e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 151:                 PORTCbits.RC5 = 1;
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
 "152
 [; ;main.c: 152:             }
 }
-[e :U 117 ]
+[e $U 117  ]
 "153
-[; ;main.c: 153:             T1CONbits.TMR1ON = 0;
-[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 153:             else
+[e :U 116 ]
 "154
-[; ;main.c: 154:             TMR1L = 0x00;
-[e = _TMR1L -> -> 0 `i `uc ]
+[; ;main.c: 154:             {
+{
 "155
-[; ;main.c: 155:             TMR1H = 0x00;
-[e = _TMR1H -> -> 0 `i `uc ]
+[; ;main.c: 155:                 PORTAbits.RA4 = 0;
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
 "156
-[; ;main.c: 156:             TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
+[; ;main.c: 156:                 _delay((unsigned long)((50)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
 "157
-[; ;main.c: 157:         }
+[; ;main.c: 157:                 PORTAbits.RA4 = 1;
+[e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
+"158
+[; ;main.c: 158:             }
+}
+[e :U 117 ]
+"159
+[; ;main.c: 159:             T1CONbits.TMR1ON = 0;
+[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+"160
+[; ;main.c: 160:             TMR1L = 0x00;
+[e = _TMR1L -> -> 0 `i `uc ]
+"161
+[; ;main.c: 161:             TMR1H = 0x00;
+[e = _TMR1H -> -> 0 `i `uc ]
+"162
+[; ;main.c: 162:             TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
+"163
+[; ;main.c: 163:         }
 }
 [e $U 118  ]
-"158
-[; ;main.c: 158:         else if(!RA1)
+"166
+[; ;main.c: 166:         else if(!RA1)
 [e :U 112 ]
 [e $ ! ! _RA1 119  ]
-"159
-[; ;main.c: 159:         {
+"167
+[; ;main.c: 167:         {
 {
-"160
-[; ;main.c: 160:             T1CONbits.TMR1ON = 1;
+"168
+[; ;main.c: 168:             _delay((unsigned long)((50)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"169
+[; ;main.c: 169:             T1CONbits.TMR1ON = 1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"161
-[; ;main.c: 161:             while(!RA1);
+"170
+[; ;main.c: 170:             while(!RA1);
 [e $U 120  ]
 [e :U 121 ]
 [e :U 120 ]
 [e $ ! _RA1 121  ]
 [e :U 122 ]
-"162
-[; ;main.c: 162:             if(TMR1IF)
+"171
+[; ;main.c: 171:             if(TMR1IF)
 [e $ ! _TMR1IF 123  ]
-"163
-[; ;main.c: 163:             {
+"172
+[; ;main.c: 172:             {
 {
-"164
-[; ;main.c: 164:                 PORTCbits.RC0 = 0;
+"173
+[; ;main.c: 173:                 PORTCbits.RC0 = 0;
 [e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-"165
-[; ;main.c: 165:                 _delay((unsigned long)((500)*(4000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
-"166
-[; ;main.c: 166:                 PORTCbits.RC0 = 1;
+"174
+[; ;main.c: 174:                 _delay((unsigned long)((50)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"175
+[; ;main.c: 175:                 PORTCbits.RC0 = 1;
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"167
-[; ;main.c: 167:             }
+"176
+[; ;main.c: 176:             }
 }
 [e $U 124  ]
-"168
-[; ;main.c: 168:             else
+"177
+[; ;main.c: 177:             else
 [e :U 123 ]
-"169
-[; ;main.c: 169:             {
+"178
+[; ;main.c: 178:             {
 {
-"170
-[; ;main.c: 170:                 PORTAbits.RA5 = 0;
+"179
+[; ;main.c: 179:                 PORTAbits.RA5 = 0;
 [e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
-"171
-[; ;main.c: 171:                 _delay((unsigned long)((500)*(4000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
-"172
-[; ;main.c: 172:                 PORTAbits.RA5 = 1;
+"180
+[; ;main.c: 180:                 _delay((unsigned long)((50)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"181
+[; ;main.c: 181:                 PORTAbits.RA5 = 1;
 [e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
-"173
-[; ;main.c: 173:             }
+"182
+[; ;main.c: 182:             }
 }
 [e :U 124 ]
-"174
-[; ;main.c: 174:             T1CONbits.TMR1ON = 0;
+"183
+[; ;main.c: 183:             T1CONbits.TMR1ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"175
-[; ;main.c: 175:             TMR1L = 0x00;
+"184
+[; ;main.c: 184:             TMR1L = 0x00;
 [e = _TMR1L -> -> 0 `i `uc ]
-"176
-[; ;main.c: 176:             TMR1H = 0x00;
+"185
+[; ;main.c: 185:             TMR1H = 0x00;
 [e = _TMR1H -> -> 0 `i `uc ]
-"177
-[; ;main.c: 177:             TMR1IF = 0;
+"186
+[; ;main.c: 186:             TMR1IF = 0;
 [e = _TMR1IF -> -> 0 `i `b ]
-"178
-[; ;main.c: 178:         }
+"187
+[; ;main.c: 187:         }
 }
 [e $U 125  ]
-"179
-[; ;main.c: 179:         else
+"188
+[; ;main.c: 188:         else
 [e :U 119 ]
-"180
-[; ;main.c: 180:         {
+"189
+[; ;main.c: 189:         {
 {
-"181
-[; ;main.c: 181:             __nop();
+"191
+[; ;main.c: 191:             __nop();
 [e ( ___nop ..  ]
-"182
-[; ;main.c: 182:         }
+"192
+[; ;main.c: 192:         }
 }
 [e :U 125 ]
 [e :U 118 ]
 [e :U 111 ]
-"190
-[; ;main.c: 190:         if(RA2)
+"195
+[; ;main.c: 195:         if(RA2)
 [e $ ! _RA2 126  ]
-"191
-[; ;main.c: 191:         {
+"196
+[; ;main.c: 196:         {
 {
-"192
-[; ;main.c: 192:             PORTCbits.RC4 = 1;
+"197
+[; ;main.c: 197:             PORTCbits.RC4 = 1;
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-"193
-[; ;main.c: 193:         }
+"198
+[; ;main.c: 198:         }
 }
 [e $U 127  ]
-"194
-[; ;main.c: 194:         else
+"199
+[; ;main.c: 199:         else
 [e :U 126 ]
-"195
-[; ;main.c: 195:         {
+"200
+[; ;main.c: 200:         {
 {
-"196
-[; ;main.c: 196:             PORTCbits.RC4 = 0;
+"201
+[; ;main.c: 201:             PORTCbits.RC4 = 0;
 [e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-"197
-[; ;main.c: 197:         }
+"202
+[; ;main.c: 202:         }
 }
 [e :U 127 ]
-"198
-[; ;main.c: 198:     }
+"203
+[; ;main.c: 203:     }
 }
 [e :U 100 ]
 [e $U 101  ]
 [e :U 102 ]
-"199
-[; ;main.c: 199: }
+"204
+[; ;main.c: 204: }
 [e :UE 87 ]
 }
