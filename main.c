@@ -14,12 +14,15 @@
 
 #include <pic16f688.h>
 
+//PORTA defines
 
+//PORTC defines
 
 
 void main(void)
 {
-
+    ANSEL = 0x00;
+    CMCON = 0x07;
 
 }
 
