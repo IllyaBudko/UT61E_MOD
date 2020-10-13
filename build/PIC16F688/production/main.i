@@ -1723,11 +1723,10 @@ void main(void)
 
     while(1)
     {
-# 218 "main.c"
-        _delay((unsigned long)((50)*(4000000UL/4000.0)));
+        _delay((unsigned long)((100)*(4000000UL/4000.0)));
         if((!RA0) || (!RA1))
         {
-            _delay((unsigned long)((50)*(4000000UL/4000.0)));
+            _delay((unsigned long)((100)*(4000000UL/4000.0)));
             if((!RA0) && (!RA1))
             {
                 _delay((unsigned long)((50)*(4000000UL/4000.0)));
@@ -1807,6 +1806,10 @@ void main(void)
 
                 __nop();
             }
+        }
+        else
+        {
+            __nop();
         }
 
 

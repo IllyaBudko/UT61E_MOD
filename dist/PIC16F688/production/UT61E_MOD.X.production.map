@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.30\pic\dat\en_msgs.txt -cn \
   -h+dist/PIC16F688/production\UT61E_MOD.X.production.sym \
   --cmf=dist/PIC16F688/production\UT61E_MOD.X.production.cmf -z -Q16F688 \
-  -oC:\Users\ILLYAB~1\AppData\Local\Temp\sd8ox2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\ILLYAB~1\AppData\Local\Temp\ssg4x3 --defsym=__MPLAB_BUILD=1 \
   -Mdist/PIC16F688/production/UT61E_MOD.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=020h-06Fh -pstack=STACK \
   -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 \
@@ -18,7 +18,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o \
+  C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o \
   dist/PIC16F688/production\UT61E_MOD.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F688
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
+C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
                 end_init                              B        B        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             2007     2007        1        0       4

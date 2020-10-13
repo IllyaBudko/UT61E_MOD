@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
+$C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 B B 2 2
 config CONFIG 4 2007 2007 1 2
@@ -66,11 +66,11 @@ STRING 13C-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/PIC16F688/production\UT61E_MOD.X.production.o
-D cinit CODE >725:C:\Users\ILLYAB~1\AppData\Local\Temp\sd8ox.s
-D cinit CODE >728:C:\Users\ILLYAB~1\AppData\Local\Temp\sd8ox.s
-D cinit CODE >734:C:\Users\ILLYAB~1\AppData\Local\Temp\sd8ox.s
-D cinit CODE >736:C:\Users\ILLYAB~1\AppData\Local\Temp\sd8ox.s
-E cinit CODE >737:C:\Users\ILLYAB~1\AppData\Local\Temp\sd8ox.s
+D cinit CODE >725:C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4x.s
+D cinit CODE >728:C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4x.s
+D cinit CODE >734:C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4x.s
+D cinit CODE >736:C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4x.s
+E cinit CODE >737:C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4x.s
 4 intentry CODE >23:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\interrupts.c
 135 text1 CODE >23:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\interrupts.c
 135 text1 CODE >50:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\interrupts.c
@@ -107,65 +107,65 @@ E cinit CODE >737:C:\Users\ILLYAB~1\AppData\Local\Temp\sd8ox.s
 6B maintext CODE >103:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
 6C maintext CODE >104:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
 6D maintext CODE >105:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-6E maintext CODE >218:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-77 maintext CODE >219:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-81 maintext CODE >221:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-8A maintext CODE >222:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-94 maintext CODE >224:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-9D maintext CODE >225:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-A0 maintext CODE >226:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-A8 maintext CODE >227:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-AC maintext CODE >229:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B0 maintext CODE >231:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B1 maintext CODE >232:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B2 maintext CODE >233:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B2 maintext CODE >235:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B4 maintext CODE >238:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B4 maintext CODE >241:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B5 maintext CODE >242:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B5 maintext CODE >243:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B8 maintext CODE >244:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-B9 maintext CODE >245:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-BA maintext CODE >246:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-BB maintext CODE >247:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-BC maintext CODE >250:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-C0 maintext CODE >252:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-C9 maintext CODE >253:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-CC maintext CODE >254:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-D0 maintext CODE >255:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-D4 maintext CODE >257:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-D5 maintext CODE >258:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-DE maintext CODE >259:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-E1 maintext CODE >260:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-E2 maintext CODE >261:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-E2 maintext CODE >263:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-E3 maintext CODE >264:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-EC maintext CODE >265:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-EF maintext CODE >267:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-F0 maintext CODE >268:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-F1 maintext CODE >269:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-F3 maintext CODE >274:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-F7 maintext CODE >276:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-100 maintext CODE >277:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-103 maintext CODE >278:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-107 maintext CODE >279:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-10B maintext CODE >281:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-10C maintext CODE >282:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-115 maintext CODE >283:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-118 maintext CODE >284:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-119 maintext CODE >285:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-119 maintext CODE >287:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-11A maintext CODE >288:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-123 maintext CODE >289:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-126 maintext CODE >291:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-128 maintext CODE >296:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-128 maintext CODE >299:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-129 maintext CODE >301:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-129 maintext CODE >304:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-12F maintext CODE >306:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-130 maintext CODE >307:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-131 maintext CODE >308:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
-131 maintext CODE >310:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+6E maintext CODE >111:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+77 maintext CODE >112:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+81 maintext CODE >114:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+8A maintext CODE >115:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+94 maintext CODE >117:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+9D maintext CODE >118:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+A0 maintext CODE >119:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+A8 maintext CODE >120:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+AC maintext CODE >122:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B0 maintext CODE >124:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B1 maintext CODE >125:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B2 maintext CODE >126:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B2 maintext CODE >128:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B4 maintext CODE >131:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B4 maintext CODE >134:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B5 maintext CODE >135:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B5 maintext CODE >136:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B8 maintext CODE >137:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+B9 maintext CODE >138:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+BA maintext CODE >139:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+BB maintext CODE >140:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+BC maintext CODE >143:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+C0 maintext CODE >145:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+C9 maintext CODE >146:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+CC maintext CODE >147:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+D0 maintext CODE >148:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+D4 maintext CODE >150:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+D5 maintext CODE >151:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+DE maintext CODE >152:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+E1 maintext CODE >153:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+E2 maintext CODE >154:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+E2 maintext CODE >156:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+E3 maintext CODE >157:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+EC maintext CODE >158:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+EF maintext CODE >160:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+F0 maintext CODE >161:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+F1 maintext CODE >162:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+F3 maintext CODE >167:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+F7 maintext CODE >169:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+100 maintext CODE >170:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+103 maintext CODE >171:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+107 maintext CODE >172:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+10B maintext CODE >174:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+10C maintext CODE >175:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+115 maintext CODE >176:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+118 maintext CODE >177:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+119 maintext CODE >178:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+119 maintext CODE >180:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+11A maintext CODE >181:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+123 maintext CODE >182:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+126 maintext CODE >184:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+128 maintext CODE >189:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+128 maintext CODE >192:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+129 maintext CODE >198:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+129 maintext CODE >201:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+12F maintext CODE >203:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+130 maintext CODE >204:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+131 maintext CODE >205:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+131 maintext CODE >207:C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -188,29 +188,29 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _T1CONbits 10 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _WPUA 95 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
+___sp 0 0 STACK 2 stack C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
 _main 20 0 CODE 0 maintext dist/PIC16F688/production\UT61E_MOD.X.production.o
 btemp 7E 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
-start 16 0 CODE 0 init C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
+start 16 0 CODE 0 init C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
 __size_of_main 0 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
 _OPTION_REGbits 81 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
 wtemp0 7E 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _CMCON0 19 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
-___stacklo 0 0 ABS 0 - C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
+___stackhi 0 0 ABS 0 - C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
+___stacklo 0 0 ABS 0 - C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
 start_initialization 1A 0 CODE 0 cinit dist/PIC16F688/production\UT61E_MOD.X.production.o
 _TMR1IF 60 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
+___int_sp 0 0 STACK 2 stack C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -257,7 +257,7 @@ _isr 26A 0 CODE 0 text1 dist/PIC16F688/production\UT61E_MOD.X.production.o
 saved_w 7E 0 ABS 0 - dist/PIC16F688/production\UT61E_MOD.X.production.o
 __end_of_isr 278 0 CODE 0 text1 dist/PIC16F688/production\UT61E_MOD.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ILLYAB~1\AppData\Local\Temp\sd8oxb.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ILLYAB~1\AppData\Local\Temp\ssg4xc.o
 __pmaintext 20 0 CODE 0 maintext dist/PIC16F688/production\UT61E_MOD.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
