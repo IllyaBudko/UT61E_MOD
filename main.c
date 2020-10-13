@@ -112,86 +112,92 @@ void main(void)
     //Main loop for added features when the LPF feature is not activated
     while(1)
     {
-        //Long press on both buttons pressed will toggle RS232 feature 
-        //Short press reserved for future use
-        __delay_ms(150); //Button press catch
-        if((!DCAC) && (!VHZ))
+        __delay_ms(100); //Button press catch
+        if((!DCAC) || (!VHZ))
         {
-            __delay_ms(50); //Button de-bounce
-            T1CONbits.TMR1ON = 1;
-            while(!(DCAC && VHZ));
-            if(TMR1IF)
+            __delay_ms(100);
+            if((!DCAC) && (!VHZ))
             {
-                if(RS232)
+                __delay_ms(50); //Button de-bounce
+                T1CONbits.TMR1ON = 1;
+                while(!(DCAC && VHZ));
+                if(TMR1IF)
                 {
-                    PORTCbits.RS232 = 0;
+                    if(RS232)
+                    {
+                        PORTCbits.RS232 = 0;
+                    }
+                    else
+                    {
+                        PORTCbits.RS232 = 1;
+                    }
                 }
                 else
                 {
-                    PORTCbits.RS232 = 1;
+                    //For future purpose
+                    NOP();
                 }
+                T1CONbits.TMR1ON = 0;
+                TMR1L = 0x00;
+                TMR1H = 0x00;
+                TMR1IF = 0;            
+            }
+            //Long press DCAC will enable MAXMIN feature
+            //Short press will cycle through measurement mode select
+            else if(!DCAC)
+            {
+                __delay_ms(50); // Button de-bounce
+                T1CONbits.TMR1ON = 1;
+                while(!DCAC);
+                if(TMR1IF)
+                {
+                    PORTCbits.MAXMIN = 0;
+                    __delay_ms(50);
+                    PORTCbits.MAXMIN = 1;
+                }
+                else
+                {
+                    PORTAbits.DCAC_HOOK = 0;
+                    __delay_ms(50);
+                    PORTAbits.DCAC_HOOK = 1;
+                }
+                T1CONbits.TMR1ON = 0;
+                TMR1L = 0x00;
+                TMR1H = 0x00;
+                TMR1IF = 0;
+            }
+            //Long press VHZ will turn on back light for display
+            //Short press will cycle frequency measurement
+            else if(!VHZ)
+            {
+                __delay_ms(50); //Button de-bounce
+                T1CONbits.TMR1ON = 1;
+                while(!VHZ);
+                if(TMR1IF)
+                {
+                    PORTCbits.BKLIT = 0;
+                    __delay_ms(50);
+                    PORTCbits.BKLIT = 1;
+                }
+                else
+                {
+                    PORTAbits.VHZ_HOOK = 0;
+                    __delay_ms(50);
+                    PORTAbits.VHZ_HOOK = 1;
+                }
+                T1CONbits.TMR1ON = 0;
+                TMR1L = 0x00;
+                TMR1H = 0x00;
+                TMR1IF = 0;
             }
             else
             {
-                //For future purpose
+                //Nothing happens when the buttons are not pressed
                 NOP();
             }
-            T1CONbits.TMR1ON = 0;
-            TMR1L = 0x00;
-            TMR1H = 0x00;
-            TMR1IF = 0;            
-        }
-        //Long press DCAC will enable MAXMIN feature
-        //Short press will cycle through measurement mode select
-        else if(!DCAC)
-        {
-            __delay_ms(50); // Button de-bounce
-            T1CONbits.TMR1ON = 1;
-            while(!DCAC);
-            if(TMR1IF)
-            {
-                PORTCbits.MAXMIN = 0;
-                __delay_ms(50);
-                PORTCbits.MAXMIN = 1;
-            }
-            else
-            {
-                PORTAbits.DCAC_HOOK = 0;
-                __delay_ms(50);
-                PORTAbits.DCAC_HOOK = 1;
-            }
-            T1CONbits.TMR1ON = 0;
-            TMR1L = 0x00;
-            TMR1H = 0x00;
-            TMR1IF = 0;
-        }
-        //Long press VHZ will turn on back light for display
-        //Short press will cycle frequency measurement
-        else if(!VHZ)
-        {
-            __delay_ms(50); //Button de-bounce
-            T1CONbits.TMR1ON = 1;
-            while(!VHZ);
-            if(TMR1IF)
-            {
-                PORTCbits.BKLIT = 0;
-                __delay_ms(50);
-                PORTCbits.BKLIT = 1;
-            }
-            else
-            {
-                PORTAbits.VHZ_HOOK = 0;
-                __delay_ms(50);
-                PORTAbits.VHZ_HOOK = 1;
-            }
-            T1CONbits.TMR1ON = 0;
-            TMR1L = 0x00;
-            TMR1H = 0x00;
-            TMR1IF = 0;
         }
         else
         {
-            //Nothing happens when the buttons are not pressed
             NOP();
         }
         
