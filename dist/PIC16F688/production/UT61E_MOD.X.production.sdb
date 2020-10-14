@@ -13,7 +13,7 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "23 C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\interrupts.c
 [v _isr isr `II(v  1 e 1 0 ]
-"51 C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+"54 C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "167 C:\Program Files\Microchip\xc8\v2.30\pic\include\proc\pic16f688.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -94,7 +94,7 @@
 [v _RC1 RC1 `VEb  1 e 0 @57 ]
 "2382
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
-"51 C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
+"54 C:\Users\Illya Budko\Documents\NetBeansProjects\UT61E_MOD.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "210

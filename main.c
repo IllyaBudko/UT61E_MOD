@@ -74,9 +74,9 @@ void main(void)
     
     //MCU logic level 1(high) is DMM logic level 0(low) and vice versa
 
+    __delay_ms(100); //De-bounce
     if(!VHZ)
     {
-        __delay_ms(100); //De-bounce
         T1CONbits.TMR1ON = 1;
         while(!VHZ);
         //If timer interrupt flag sets before VHZ button is de-pressed
@@ -112,13 +112,11 @@ void main(void)
     //Main loop for added features when the LPF feature is not activated
     while(1)
     {
-        __delay_ms(100); //Button press catch
         if((!DCAC) || (!VHZ))
         {
             __delay_ms(100);
             if((!DCAC) && (!VHZ))
             {
-                __delay_ms(50); //Button de-bounce
                 T1CONbits.TMR1ON = 1;
                 while(!(DCAC && VHZ));
                 if(TMR1IF)
@@ -146,7 +144,6 @@ void main(void)
             //Short press will cycle through measurement mode select
             else if(!DCAC)
             {
-                __delay_ms(50); // Button de-bounce
                 T1CONbits.TMR1ON = 1;
                 while(!DCAC);
                 if(TMR1IF)
@@ -170,7 +167,6 @@ void main(void)
             //Short press will cycle frequency measurement
             else if(!VHZ)
             {
-                __delay_ms(50); //Button de-bounce
                 T1CONbits.TMR1ON = 1;
                 while(!VHZ);
                 if(TMR1IF)

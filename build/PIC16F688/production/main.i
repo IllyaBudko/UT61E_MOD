@@ -1662,7 +1662,7 @@ extern int printf(const char *, ...);
 #pragma config BOREN = OFF
 #pragma config IESO = OFF
 #pragma config FCMEN = OFF
-# 51 "main.c"
+# 54 "main.c"
 void main(void)
 {
 
@@ -1685,9 +1685,10 @@ void main(void)
     T1CON = 0x30;
 
 
+
+    _delay((unsigned long)((100)*(4000000UL/4000.0)));
     if(!RA1)
     {
-        _delay((unsigned long)((100)*(4000000UL/4000.0)));
         T1CONbits.TMR1ON = 1;
         while(!RA1);
 
@@ -1723,13 +1724,11 @@ void main(void)
 
     while(1)
     {
-        _delay((unsigned long)((100)*(4000000UL/4000.0)));
         if((!RA0) || (!RA1))
         {
             _delay((unsigned long)((100)*(4000000UL/4000.0)));
             if((!RA0) && (!RA1))
             {
-                _delay((unsigned long)((50)*(4000000UL/4000.0)));
                 T1CONbits.TMR1ON = 1;
                 while(!(RA0 && RA1));
                 if(TMR1IF)
@@ -1757,7 +1756,6 @@ void main(void)
 
             else if(!RA0)
             {
-                _delay((unsigned long)((50)*(4000000UL/4000.0)));
                 T1CONbits.TMR1ON = 1;
                 while(!RA0);
                 if(TMR1IF)
@@ -1781,7 +1779,6 @@ void main(void)
 
             else if(!RA1)
             {
-                _delay((unsigned long)((50)*(4000000UL/4000.0)));
                 T1CONbits.TMR1ON = 1;
                 while(!RA1);
                 if(TMR1IF)
